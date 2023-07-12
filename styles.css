@@ -1,0 +1,124 @@
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+
+  background-color: #c5d7ea;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 5em;
+  text-align: center;
+  color: #47519b;
+  font-family: "Pacifico", cursive;
+}
+#container {
+  display: grid;
+  height: 560px;
+  width: 560px;
+
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  border: 1px solid #ffffff;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding-bottom: 10px;
+}
+.childOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+}
+
+.slider-box {
+  padding: 1em 1em;
+  margin-top: 2em;
+  text-align: center;
+}
+#range {
+  width: 350px;
+  margin-bottom: 2em;
+}
+#sizeValue {
+  font-size: 30px;
+  color: #47519b;
+  font-family: monospace;
+}
+
+button {
+  position: relative;
+  padding: 0.5em 1em;
+  border: 0;
+  border-radius: 0.5em;
+
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+button:active {
+  top: 2px;
+  left: 1px;
+  box-shadow: none;
+}
+.btn {
+  background-color: #c5dff8;
+  width: 150px;
+  margin: 10px;
+
+  line-height: 45px;
+  font-size: 20px;
+}
+.rainbow {
+  margin-top: 0;
+}
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 400px;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #6f7dec;
+  border-radius: 0.5rem;
+  height: 0.7rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -6.4px; /* Centers thumb on the track */
+  background-color: #47519b;
+  border-radius: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #47519b;
+  outline-offset: 0.125rem;
+}
